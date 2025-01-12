@@ -18,5 +18,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('book_inventory/{book}/restore', [BookController::class, 'restore'])->name('admin.book_inventory.restore');
     Route::delete('book_inventory/{book}/force-delete', [BookController::class, 'forceDelete'])->name('admin.book_inventory.force_delete');
     Route::get('book-inventory/{book}', [BookController::class, 'show'])->name('book_inventory.show');
-    Route::post('/admin/book_inventory/import', [BookController::class, 'import'])->name('admin.book_inventory.import');
 });
